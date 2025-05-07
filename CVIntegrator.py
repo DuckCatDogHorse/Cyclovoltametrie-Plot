@@ -7,7 +7,7 @@ from pathlib import Path
 '''CODE FÜR PRAKTIKUMSTAG 3 CYCLOVOLTAMETRIE'''
 '''HIER DATEIPFAD WO DIE DATEN LIEGEN EINTRAGEN'''
 '''REINIGUNGSDATEIN MÜSSEN ENTFERNT WERDEN, SONST WERDEN SIE MITGEPLOTTED'''
-folder = Path(r"C:\Matlab documents\H2SO4 M0,2 gut")
+folder = Path(r"C:\Beispiel\Ablageort")
 file_paths = sorted(folder.glob("*.csv"))
 
 usecols = ["E__V", "I__A"]
