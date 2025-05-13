@@ -67,8 +67,6 @@ diff_pos = np.clip(y0 - y_grid, a_min=0, a_max=None)
 
 area_forward = np.trapz(diff_pos, x_grid)
 
-print(f"Fläche (Forward) von {E_start}V bis {E_end}V bis y0={y0}: {area_forward:.6e} C")
-
 plt.plot(e_values_reverse, mean_reverse, color='red', linewidth=2)
 
 '''INTEGRATIONS HILFSGRAPHEN wenn man die Integration benötigt müssen die "#" entfernt werden'''
@@ -82,7 +80,6 @@ E1 = -0.000513
 I2 = 0.8
 E2 = -0.000375
 m = (E2-E1)/(I2-I1)
-print(f"Steigung ist {m}")
 
 '''STEIGUNGS GRAPH auch hier wenn benötigt, dass # entfernen'''
 #plt.plot([I1, I2], [E1, E2], color='black', label='Hilfslinie')
@@ -114,6 +111,10 @@ min_stromwert, zugehoeriger_ev, zugehoerige_datei = \
     finde_min_strom_und_ev(all_forward + all_reverse, verarbeitete_dateien)
 
 '''die Prints werden aktuell immer in die Konsole geschrieben, da es fürs plotten keinen unterschied macht. Falls sie stören oder verwirren ein # davor setzen'''
+print(f"Fläche (Forward) von {E_start}V bis {E_end}V bis y0={y0}: {area_forward:.6e} C")
+
+print(f"Steigung ist {m}")
+
 print(f"Der niedrigste Stromwert ist {min_stromwert:.6e} A")
 print(f"Zugehöriger EV-Wert: {zugehoeriger_ev:.6f} V")
 print(f"In Datei: {zugehoerige_datei}")
