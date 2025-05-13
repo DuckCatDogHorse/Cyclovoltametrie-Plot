@@ -84,7 +84,7 @@ m = (E2-E1)/(I2-I1)
 '''STEIGUNGS GRAPH auch hier wenn benötigt, dass # entfernen'''
 #plt.plot([I1, I2], [E1, E2], color='black', label='Hilfslinie')
 
-plt.title('Cyclic Voltammetry: H2SO4 0.2M gut')
+plt.title('Cyclic Voltammetry: "Dein Titel hier"')
 plt.xlabel('Potential (V)')
 plt.ylabel('Current (A)')
 plt.grid(True, linestyle='--', alpha=0.5)
