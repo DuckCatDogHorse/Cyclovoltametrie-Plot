@@ -71,7 +71,7 @@ print(f"Fläche (Forward) von {E_start}V bis {E_end}V bis y0={y0}: {area_forward
 
 plt.plot(e_values_reverse, mean_reverse, color='red', linewidth=2)
 
-'''INTEGRATIONS HILFSGRAPHEN'''
+'''INTEGRATIONS HILFSGRAPHEN wenn man die Integration benötigt müssen die "#" entfernt werden'''
 #plt.axhline(y=y0, color='green', linestyle='--', label='Integrationsuntergrenze')
 #plt.axvline(x=E_start, color='blue', linestyle='--', label='Integrationsanfang')
 #plt.axvline(x=E_end, color='purple', linestyle='--', label='Integrationsende')
@@ -84,7 +84,7 @@ E2 = -0.000375
 m = (E2-E1)/(I2-I1)
 print(f"Steigung ist {m}")
 
-'''STEIGUNGS GRAPH'''
+'''STEIGUNGS GRAPH auch hier wenn benötigt, dass # entfernen'''
 #plt.plot([I1, I2], [E1, E2], color='black', label='Hilfslinie')
 
 plt.title('Cyclic Voltammetry: H2SO4 0.2M gut')
@@ -113,6 +113,7 @@ def finde_min_strom_und_ev(all_datasets, dateinamen):
 min_stromwert, zugehoeriger_ev, zugehoerige_datei = \
     finde_min_strom_und_ev(all_forward + all_reverse, verarbeitete_dateien)
 
+'''die Prints werden aktuell immer in die Konsole geschrieben, da es fürs plotten keinen unterschied macht. Falls sie stören oder verwirren ein # davor setzen'''
 print(f"Der niedrigste Stromwert ist {min_stromwert:.6e} A")
 print(f"Zugehöriger EV-Wert: {zugehoeriger_ev:.6f} V")
 print(f"In Datei: {zugehoerige_datei}")
